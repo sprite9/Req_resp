@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script></script>
+</head>
+<script>
+    window.onload=function () {
+        var date=new Date().getTime()
+        var img=document.getElementById("checkCode")
+        img.onclick=function () {
+            img.src=("/res/checkcodeServlet?"+date)
+        }
+        var a=document.getElementById("change")
+        a.onclick=function () {
+            a.href=("/res/regite.html?"+date)
+        }
+
+
+
+    }
+</script>
+<body>
+<form action="/Requestdemo3" method="post">
+    <input type="text" name="username"  placeholder="请输入用户名"><br>
+    <input type="password" name="password"  placeholder="请输入密码"><br>
+    <input type="checkbox" name="hobby" value="game">游戏
+    <input type="checkbox" name="hobby" value="music">音乐<br>
+    <input type="submit" value="注册"></input>
+</form>
+<br>
+<br>
+<img id="checkCode" src="/res/checkcodeServlet">
+<a id="change" href="">看不清，换一张....</a>
+</body>
+</html>
