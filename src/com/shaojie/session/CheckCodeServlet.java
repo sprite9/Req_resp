@@ -17,6 +17,7 @@ public class CheckCodeServlet extends HttpServlet {
         String checkcode = request.getParameter("checkcode");
 
         //获取生成的验证码
+        //获取生成雁阵吗
         HttpSession session = request.getSession();
         String  checkcode_session = (String) session.getAttribute("checkcode_session");
 
