@@ -31,9 +31,12 @@ public class CheckCodeServlet extends HttpServlet {
                 //重定向到success.jsp
                 response.sendRedirect(request.getContextPath()+"/success.jsp");
             }else {
-                //登录失败
+                //登录失败mmmmmm
                 request.setAttribute("login_error","用户名或密码错误");
                 request.getRequestDispatcher("/login.jsp").forward(request,response);
+
+
+
             }
 
         }else {
