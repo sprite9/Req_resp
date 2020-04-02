@@ -66,5 +66,6 @@ public class CheckCodeDemo extends HttpServlet {
         ImageIO.write(bufferedImage,"jpg",response.getOutputStream());
 
 
+
     }
 }
